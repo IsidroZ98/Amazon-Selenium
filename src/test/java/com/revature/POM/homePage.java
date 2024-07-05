@@ -18,7 +18,23 @@ public class homePage {
     public void openPage(){
         driver.get(pageURL);
     }
+
     @FindBy(id="twotabsearchtextbox")
     public WebElement searchBar;
+
+    public void searchItemOnSearchBar(String searchItem)
+    {
+        searchBar.sendKeys(searchItem);
+    }
+    @FindBy(id="nav-search-submit-button")
+    public WebElement searchBarSubmitButton;
+
+    public void searchBarSubmitButton()
+    {
+        searchBarSubmitButton.click();
+    }
+    @FindBy(xpath = "/html/body/div[1]/div[1]/div[1]/div[1]/div/span[1]/div[1]/div[2]/div/span/div/div/h2")
+    public WebElement resultsXpath;
+
 
 }

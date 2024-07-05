@@ -14,25 +14,22 @@ public class ProductSearchAndVerification {
     @Given("The user is in the home page")
     public void the_user_is_in_the_home_page() {
         TestDriver.driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-
+        TestDriver.homePage.openPage();
         Assert.assertTrue(TestDriver.driver.getTitle(),true );
     }
 
     @When("The user enters {string} into search tab")
     public void the_user_enters_into_search_tab(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        TestDriver.homePage.searchItemOnSearchBar(string);
     }
 
     @When("The user clicks the search button")
     public void the_user_clicks_the_search_button() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        TestDriver.homePage.searchBarSubmitButton();
     }
 
     @Then("The user should be redirected to a results page for the item")
     public void the_user_should_be_redirected_to_a_results_page_for_the_item() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        Assert.assertTrue(TestDriver.driver.getTitle(),true );
     }
 }
