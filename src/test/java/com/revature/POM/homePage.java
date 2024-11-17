@@ -26,6 +26,7 @@ public class homePage {
     {
         searchBar.sendKeys(searchItem);
     }
+
     @FindBy(id="nav-search-submit-button")
     public WebElement searchBarSubmitButton;
 
@@ -33,8 +34,35 @@ public class homePage {
     {
         searchBarSubmitButton.click();
     }
+
     @FindBy(xpath = "/html/body/div[1]/div[1]/div[1]/div[1]/div/span[1]/div[1]/div[2]/div/span/div/div/h2")
     public WebElement resultsXpath;
 
+    @FindBy(xpath = "//*[@id=\"search\"]/div[1]/div[1]/div/span[1]/div[1]/div[9]/div/div/span/div/div/div[2]/div[1]/h2/a")
+    public WebElement firstItemXpath;
 
+    public void searchedItemClick(){firstItemXpath.click();}
+
+    @FindBy(id="add-to-cart-button")
+    public WebElement addtoCartButton;
+
+    public void addtoCartButtonClick(){addtoCartButton.click();}
+
+    @FindBy(id="nav-cart")
+    public WebElement navCart;
+
+    public void navCartClick(){navCart.click();}
+
+    //Save product link url
+    // Use product link url that is saved during searchedItemClick
+    //public String productUrl;
+    //public void currentProductUrl(){productUrl = driver.getCurrentUrl();}
+
+    @FindBy(id="sc-subtotal-label-activecart")
+    public WebElement cartSubTotal;
+
+    @FindBy(name="submit.delete.8106d6ba-6996-45e1-b7bf-981c5965cfad")
+    public WebElement deleteButton;
+
+    public void removeItemfromCart(){deleteButton.click();}
 }
