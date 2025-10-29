@@ -1,11 +1,12 @@
-package com.revature.steps;
+package com.demo.steps;
 
-import com.revature.TestDriver;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Given;
 import org.junit.Assert;
 import org.junit.Test;
+
+import com.demo.TestDriver;
 
 import java.time.Duration;
 

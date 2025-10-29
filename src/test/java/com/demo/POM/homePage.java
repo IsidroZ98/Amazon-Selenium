@@ -1,4 +1,4 @@
-package com.revature.POM;
+package com.demo.POM;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

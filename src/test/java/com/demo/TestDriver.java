@@ -1,5 +1,4 @@
-package com.revature;
-import com.revature.POM.homePage;
+package com.demo;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -9,12 +8,14 @@ import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import com.demo.POM.homePage;
+
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "classpath:features",
 
-        glue = "com.revature.steps",
+        glue = "com.demo.steps",
         plugin = {
                 "pretty"
         }
