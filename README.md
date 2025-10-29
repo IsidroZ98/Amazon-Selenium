@@ -1,3 +1,3 @@
 # Will come back to this :) 
-## Templated project using Selenium-Java, Cucumber, TestNG
+## Templated project using Selenium-Java, Cucumber, JUnit
 ### Updated Bonnie Garcia dependency CVE alert
